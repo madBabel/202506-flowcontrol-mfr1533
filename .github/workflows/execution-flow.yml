@@ -16,6 +16,7 @@ jobs:
     deploy-nonprod:
         runs-on: ubuntu-latest
         # lint-build OK, unit-tests OK
+        needs: [ lint-build, unit-tests ]
         steps:
             - name: Deploying to nonprod
               run: echo "Deploying to nonprod..."
