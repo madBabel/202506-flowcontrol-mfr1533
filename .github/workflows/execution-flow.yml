@@ -46,7 +46,7 @@ jobs:
     deploy-prod:
         runs-on: ubuntu-latest
         # e2e-tests OK, load-tests OK 
-        needs: [ e2e-tests load-tests ]
+        needs: [ e2e-tests, load-tests ]
         steps:
             - name: Deploying to prod
               run: echo "Deploying to prod..."
